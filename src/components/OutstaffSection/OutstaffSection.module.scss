@@ -1,0 +1,225 @@
+.outstaff {
+  color: #17b24b;
+  padding: 60px;
+
+  &__title {
+    margin-left: 100px;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 48px;
+    text-transform: uppercase;
+  }
+
+  &__grid {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 24px;
+  }
+
+  &__left {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  &__cardLarge {
+    border: 1px solid #17b24b;
+    border-radius: 12px;
+    background: #0b0b0b;
+    padding: 24px;
+
+    h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+      color: #17b24b;
+    }
+
+    p {
+      font-size: 0.85rem;
+      color: #ccc;
+    }
+  }
+
+  &__bottomRow {
+    z-index: 1;
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+
+    .outstaff__card {
+      flex: 1;
+    }
+  }
+
+  &__card {
+    border: 1px solid #17b24b;
+    border-radius: 12px;
+    background: #0b0b0b;
+    padding: 24px;
+    min-width: 140px;
+
+    h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+      color: #17b24b;
+    }
+
+    p {
+      font-size: 0.85rem;
+      color: #ccc;
+    }
+  }
+
+  &__schemaCard {
+    flex: 1;
+    min-width: 300px;
+    border: 1px solid #17b24b;
+    border-radius: 12px;
+    background: #000;
+    padding: 24px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    z-index: 2;
+
+    h3 {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #17b24b;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+    }
+
+    p {
+      font-size: 0.85rem;
+      color: #ccc;
+      margin-bottom: 16px;
+    }
+
+    .schema {
+      flex-grow: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 16px;
+
+      img {
+        max-width: 100%;
+        max-height: 150px;
+        object-fit: contain;
+      }
+    }
+
+    .btn {
+      background-color: #17b24b;
+      color: #000;
+      padding: 10px 20px;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 0.85rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: #13a143;
+      }
+    }
+  }
+}
+
+.outstaff__schemaCard {
+  position: relative;
+  z-index: 2;
+}
+
+// ===== АДАПТАЦИЯ =====
+
+// Планшеты (до 1024px)
+@media (max-width: 1024px) {
+  .outstaff {
+    padding: 40px 8px;
+
+    &__title {
+      font-size: 2rem;
+      margin-bottom: 32px;
+    }
+
+    &__grid {
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    &__left,
+    &__schemaCard {
+      min-width: 0;
+      width: 100%;
+      max-width: 100%;
+    }
+
+    &__bottomRow {
+      flex-direction: column;
+      gap: 18px;
+    }
+  }
+}
+
+// Мобильные устройства (до 600px)
+@media (max-width: 600px) {
+  .outstaff {
+    padding: 24px 2vw;
+
+    &__title {
+      font-size: 1.2rem;
+      margin-bottom: 18px;
+    }
+
+    &__grid {
+      gap: 10px;
+    }
+
+    &__cardLarge,
+    &__card,
+    &__schemaCard {
+      padding: 12px 6px;
+      border-radius: 8px;
+    }
+
+    &__cardLarge h3,
+    &__card h3,
+    &__schemaCard h3 {
+      font-size: 0.95rem;
+      margin-bottom: 8px;
+    }
+
+    &__cardLarge p,
+    &__card p,
+    &__schemaCard p {
+      font-size: 0.78rem;
+    }
+
+    &__schemaCard {
+      .schema {
+        margin-bottom: 10px;
+
+        img {
+          max-height: 70px;
+        }
+      }
+      .btn {
+        width: 100%;
+        font-size: 0.9rem;
+        padding: 10px 0;
+      }
+    }
+  }
+}

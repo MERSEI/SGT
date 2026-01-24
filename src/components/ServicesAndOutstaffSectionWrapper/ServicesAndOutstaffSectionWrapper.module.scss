@@ -1,0 +1,21 @@
+.wrapper {
+  position: relative;
+  overflow: hidden;
+  margin-top: 0; // если был отступ сверху, уберите его
+  padding-top: 0; // если был padding, уберите
+}
+
+.linesBck {
+  position: absolute;
+  top: 0; // прижат к верху wrapper
+  right: 5px;
+  height: 100%; // фон только на высоту обёртки
+  width: auto;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.35; // сделать более прозрачным
+  background: none;
+  filter: drop-shadow(0 0 0 #0f7c33) brightness(0.8) sepia(1) hue-rotate(70deg)
+    saturate(4); // зелёный оттенок
+  mix-blend-mode: lighten; // линии будут светиться на тёмном фоне
+}

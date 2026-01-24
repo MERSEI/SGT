@@ -1,0 +1,90 @@
+.partners {
+  padding: 60px 20px;
+  border-top: 2px #17b24b solid;
+  border-bottom: 2px #17b24b solid;
+  background-color: black;
+  text-align: center;
+  overflow: hidden;
+}
+
+.title {
+  color: #17b24b;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+/* Обёртка — скрывает переполнение */
+.logosWrapper {
+  overflow: hidden;
+  width: 100%;
+}
+
+/* Бесконечная лента */
+.logos {
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  display: flex;
+  gap: 75px;
+  animation: scroll-logos 40s linear infinite;
+  width: max-content;
+}
+
+/* Сами логотипы */
+.logo {
+  max-height: 100%;
+  filter: drop-shadow(0 0 8px #17b24b);
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
+/* Анимация движения */
+@keyframes scroll-logos {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* ===== АДАПТАЦИЯ ===== */
+@media (max-width: 1024px) {
+  .partners {
+    padding: 36px 6vw;
+  }
+  .title {
+    font-size: 1.5rem;
+    margin-bottom: 22px;
+  }
+  .logos {
+    gap: 28px;
+    animation-duration: 25s;
+  }
+  .logo {
+    max-height: 38px;
+  }
+}
+
+@media (max-width: 600px) {
+  .partners {
+    padding: 18px 2vw;
+  }
+  .title {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+  }
+  .logos {
+    gap: 10px;
+    animation-duration: 20s;
+  }
+  .logo {
+    max-height: 22px;
+    margin-right: 8px;
+  }
+}

@@ -1,0 +1,219 @@
+.consulting {
+  position: relative;
+  background: #000000;
+  color: white;
+  padding: 80px 0;
+  overflow: hidden;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+
+  .container {
+    margin: 0;
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+  }
+
+  .title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 60px;
+    color: #17b24b;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+
+    @media (max-width: 768px) {
+      font-size: 2rem;
+      margin-bottom: 40px;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 1.6rem;
+      letter-spacing: 1px;
+    }
+  }
+
+  .plans {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 80px;
+
+    @media (max-width: 968px) {
+      grid-template-columns: 1fr;
+      gap: 20px;
+      margin-bottom: 60px;
+    }
+
+    .plan {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 15px;
+      padding: 30px;
+      text-align: left;
+      transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      backdrop-filter: blur(10px);
+      transform-style: preserve-3d;
+      perspective: 1000px;
+
+      &:hover {
+        border-color: rgba(0, 255, 127, 0.5);
+        box-shadow: 0 15px 40px rgba(0, 255, 127, 0.15);
+        background: rgba(255, 255, 255, 0.08);
+      }
+
+      &.highlighted {
+        background: linear-gradient(135deg, #17b24b, #00cc66);
+        color: #000;
+        border: none;
+        transform: scale(1.08);
+        box-shadow: 0 20px 50px rgba(0, 255, 127, 0.25);
+
+        h3 {
+          color: #000;
+        }
+
+        .price {
+          color: #000;
+        }
+
+        &:hover {
+          transform: scale(1.08);
+          box-shadow: 0 25px 60px rgba(0, 255, 127, 0.3);
+        }
+      }
+
+      h3 {
+        font-size: 1.8rem;
+        font-weight: 600;
+        margin-bottom: 20px;
+        color: #17b24b;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 30px 0;
+
+        li {
+          padding: 8px 0;
+          position: relative;
+          padding-left: 20px;
+          font-size: 0.95rem;
+          line-height: 1.4;
+
+          &::before {
+            content: "—";
+            position: absolute;
+            left: 0;
+            color: #17b24b;
+            font-weight: bold;
+          }
+        }
+      }
+
+      .price {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #17b24b;
+        text-align: center;
+      }
+
+      &.highlighted ul li::before {
+        color: #000;
+      }
+    }
+  }
+
+  .bottomBlocks {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin-bottom: 50px;
+
+    @media (max-width: 968px) {
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+
+    .block {
+      background: transparent;
+      padding: 30px;
+      border: 1px solid rgba(0, 255, 127, 0.3);
+      border-radius: 10px;
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 255, 127, 0.05);
+        border-radius: 10px;
+        z-index: -1;
+      }
+
+      h4 {
+        font-size: 1.8rem;
+        font-weight: 600;
+        margin-bottom: 25px;
+        color: #17b24b;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+          padding: 8px 0;
+          position: relative;
+          padding-left: 20px;
+          font-size: 0.95rem;
+          line-height: 1.4;
+          color: rgba(255, 255, 255, 0.9);
+
+          &::before {
+            content: "—";
+            position: absolute;
+            left: 0;
+            color: #17b24b;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+
+  .note {
+    display: block;
+
+    text-align: left;
+    font-size: 0.5rem;
+    line-height: 1.6;
+    color: #00ff7f;
+    max-width: 600px;
+    margin: 0;
+    opacity: 0.9;
+
+    @media (max-width: 768px) {
+      font-size: 0.9rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 60px 0;
+
+    .container {
+      padding: 0 20px;
+    }
+  }
+}

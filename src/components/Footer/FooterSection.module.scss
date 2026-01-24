@@ -1,0 +1,124 @@
+.footer {
+  width: 100%;
+  background: black;
+  border-top: 2px solid #17b24b;
+  border-bottom: 2px solid #17b24b;
+  padding: 32px 0 24px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 160px;
+  box-sizing: border-box;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+  margin-left: 48px;
+}
+
+.logo {
+  width: 120px;
+  height: auto;
+}
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+
+  h3 {
+    color: #17b24b;
+    font-size: 2rem;
+    font-weight: 800;
+    margin: 0 0 8px 0;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  a {
+    color: #fff;
+    font-size: 1.1rem;
+    text-decoration: none;
+    font-weight: 400;
+    margin-bottom: 2px;
+    transition: color 0.2s;
+    &:hover {
+      color: #17b24b;
+    }
+  }
+
+  p {
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin: 0;
+  }
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
+  margin-right: 48px;
+
+  p {
+    color: #ccc;
+    font-size: 1rem;
+    margin: 0;
+    text-align: right;
+    line-height: 1.4;
+  }
+}
+
+@media (max-width: 900px) {
+  .footer {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 24px 0 16px 0;
+    min-height: unset;
+  }
+  .left, .right {
+    margin: 0 24px;
+    align-items: flex-start;
+  }
+  .right {
+    align-items: flex-start;
+    margin-top: 24px;
+  }
+}
+// Планшеты (до 900px уже есть), добавим мобильные (до 600px)
+@media (max-width: 600px) {
+  .footer {
+    padding: 14px 0 10px 0;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .left, .right {
+    margin: 0 8px;
+    gap: 12px;
+  }
+  .logo {
+    width: 70px;
+  }
+  .contacts {
+    h3 {
+      font-size: 1.1rem;
+      margin-bottom: 4px;
+    }
+    a, p {
+      font-size: 0.9rem;
+    }
+  }
+  .right {
+    margin-top: 12px;
+    p {
+      font-size: 0.8rem;
+      text-align: left;
+    }
+  }
+}

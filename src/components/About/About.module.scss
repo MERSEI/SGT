@@ -1,0 +1,124 @@
+.About {
+  position: relative;
+  background: url("../../assets/background-about.webp") no-repeat center center /
+    cover;
+  padding: clamp(30px, 8vw, 120px) 0;
+  color: white;
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to left,
+      rgba(0, 0, 0, 0.85) 35%,
+      rgba(0, 0, 0, 0.1) 65%
+    );
+    z-index: 0;
+  }
+
+  @media (max-width: 1024px) {
+    background-position: center -50px;
+  }
+
+  @media (max-width: 768px) {
+    background-position: center -80px;
+  }
+
+  @media (max-width: 480px) {
+    background-position: center -120px;
+  }
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: clamp(10px, 4vw, 40px);
+  padding: 0 clamp(16px, 5vw, 80px);
+  max-width: 1440px;
+  margin: 0 auto;
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    text-align: center;
+    gap: 50px;
+  }
+}
+
+.textBlock {
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+  flex: 1 1 50%;
+  min-width: 280px;
+  font-family: "Tilda Sans VF", sans-serif;
+  font-weight: 400;
+  font-size: clamp(14px, 1.5vw, 18px);
+  line-height: 1.6;
+
+  p {
+    margin-bottom: 1em;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 16px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 15px;
+  }
+}
+
+.title {
+  text-align: left;
+  font-family: "Unbounded", sans-serif;
+  color: #17b24b;
+  font-size: clamp(24px, 3vw, 42px);
+  font-weight: 700;
+  margin-bottom: 2em;
+  line-height: 1.2;
+
+  @media (max-width: 768px) {
+    font-size: 32px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 28px;
+  }
+}
+
+.hexImage {
+  flex: 1 1 50%;
+  max-width: clamp(200px, 40vw, 500px);
+  height: auto;
+  margin-left: clamp(10px, 3vw, 50px);
+  object-fit: contain;
+
+  @media (max-width: 1024px) {
+    margin-left: 0;
+    max-width: 400px;
+  }
+
+  @media (max-width: 768px) {
+    max-width: 300px;
+  }
+
+  @media (max-width: 480px) {
+    max-width: 240px;
+  }
+}
+
+.highlight {
+  color: #17b24b;
+}
+@media (max-width: 768px) {
+  .textBlock {
+    order: 2;
+  }
+  .hexImage {
+    order: 1;
+    margin: 0 auto;
+  }
+}

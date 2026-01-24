@@ -1,0 +1,232 @@
+.specialOffers {
+  background: "linear-gradient(90deg, #000000 0%, #17B24B 100%)";
+  padding: 60px 60px;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 60px;
+    width: 100%;
+    height: 100%;
+    background: url("/assets/bg-circuit-lines.png") no-repeat center center;
+    background-size: cover;
+    opacity: 0.2;
+    z-index: 0;
+  }
+
+  .linesBck {
+    position: absolute;
+    left: -125%;
+    top: -160%;
+    width: 350%;
+    height: 350%;
+    transform: rotate(90deg);
+    z-index: 0;
+    opacity: 0.35;
+    pointer-events: none;
+    filter: drop-shadow(0 0 0 #17b24b) brightness(0.7) sepia(1)
+      hue-rotate(70deg) saturate(4);
+    mix-blend-mode: lighten;
+  }
+
+  .glowDot {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #17b24b;
+    box-shadow: 0 0 16px 8px #17b24b88, 0 0 32px 16px #17b24b44;
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  .title {
+    margin-left: 90px;
+    font-size: 40px;
+    font-weight: bold;
+    color: #fff;
+    z-index: 1;
+    position: relative;
+    margin-bottom: 40px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  .cards {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    flex-wrap: wrap;
+    z-index: 1;
+    position: relative;
+  }
+
+  .card {
+    z-index: 1;
+    background: rgba(23, 178, 75, 0.85);
+    border-radius: 20px;
+    padding: 32px 24px;
+    max-width: 600px;
+    width: 100%;
+    color: #000;
+    position: relative;
+    box-shadow: 0 0 20px #17b24b55;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    overflow: hidden;
+    height: auto;
+    aspect-ratio: unset;
+    min-height: 280px;
+
+    .cardBg {
+      position: absolute;
+      inset: 0;
+      background: url("../../assets/Town_bck.webp") center/cover no-repeat;
+      opacity: 0.3;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    > *:not(.cardBg) {
+      position: relative;
+      z-index: 1;
+    }
+
+    .cardTitle {
+      font-size: 2rem;
+      font-weight: 700;
+      text-align: left;
+      color: #000;
+      margin-bottom: 12px;
+      line-height: 1.1;
+      text-transform: uppercase;
+    }
+
+    .subtitle {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #fff;
+      text-align: left;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+    }
+
+    .cardText {
+      text-align: left;
+      color: #000;
+      font-size: 1rem;
+
+      p {
+        margin-bottom: 10px;
+
+        strong {
+          color: #000;
+        }
+      }
+    }
+
+    .button {
+      margin-top: 20px;
+      background: #000;
+      color: #17b24b;
+      border: none;
+      padding: 10px 30px;
+      font-size: 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      margin-left: auto;
+
+      &:hover {
+        background: #17b24b;
+        color: #000;
+      }
+    }
+  }
+}
+
+// ===== АДАПТАЦИЯ =====
+
+// Планшеты (до 1024px)
+@media (max-width: 1024px) {
+  .specialOffers {
+    padding: 36px 2vw;
+
+    .title {
+      font-size: 2rem;
+      margin-bottom: 24px;
+    }
+    .cards {
+      gap: 16px;
+    }
+    .card {
+      max-width: 340px;
+      padding: 18px 10px;
+      border-radius: 14px;
+
+      .cardTitle {
+        font-size: 1.2rem;
+      }
+      .subtitle {
+        font-size: 1rem;
+      }
+      .cardText {
+        font-size: 0.95rem;
+      }
+      .button {
+        font-size: 0.95rem;
+        padding: 8px 18px;
+        border-radius: 5px;
+        margin-left: auto;
+      }
+    }
+  }
+}
+
+// Мобильные устройства (до 600px)
+@media (max-width: 600px) {
+  .specialOffers {
+    padding: 14px 1vw;
+
+    .title {
+      font-size: 1.1rem;
+      margin-bottom: 10px;
+      letter-spacing: 1px;
+    }
+    .cards {
+      flex-direction: column;
+      gap: 25px;
+      align-items: stretch;
+    }
+    .card {
+      max-width: 100vw;
+      padding: 8px 2vw;
+      border-radius: 8px;
+
+      .cardTitle {
+        font-size: 0.95rem;
+        margin-bottom: 6px;
+      }
+      .subtitle {
+        font-size: 0.8rem;
+        margin-bottom: 8px;
+      }
+      .cardText {
+        font-size: 0.8rem;
+      }
+      .button {
+        font-size: 0.85rem;
+        padding: 7px 0;
+        width: 100%;
+        border-radius: 5px;
+        margin-top: 10px;
+        margin-left: 0;
+      }
+    }
+  }
+}

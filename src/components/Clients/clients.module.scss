@@ -1,0 +1,111 @@
+.clients {
+  margin-top: 80px;
+  border-top: #17b24b 2px solid;
+  border-bottom: #17b24b 2px solid;
+  background-color: #000;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 13px 0 23px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.title {
+  font-size: 25px;
+  color: #17b24b;
+  font-weight: 500;
+  margin-bottom: 14px;
+}
+
+.logosWrapper {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  height: 72px;
+}
+
+.logos {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  gap: 61px;
+  height: 100%;
+  animation: scroll-left 10000s linear infinite;
+  will-change: transform;
+}
+
+.logo {
+  height: auto;
+  width: auto;
+  max-height: 60px;
+  max-width: 120px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+  display: block;
+  cursor: pointer;
+}
+
+.logo:hover,
+.logo:active {
+  transform: scale(1.1);
+}
+
+@keyframes scroll-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@media (max-width: 1024px) {
+  .clients {
+    padding: 8px 18px 12px;
+  }
+
+  .title {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .logosWrapper {
+    height: 48px;
+  }
+
+  .logo {
+    max-height: 38px;
+    max-width: 70px;
+  }
+
+  .logos {
+    gap: 28px;
+  }
+}
+
+@media (max-width: 600px) {
+  .clients {
+    padding: 4px 2vw;
+  }
+
+  .title {
+    font-size: 13px;
+    margin-bottom: 6px;
+  }
+
+  .logosWrapper {
+    height: 32px;
+  }
+
+  .logo {
+    max-height: 22px;
+    max-width: 40px;
+  }
+
+  .logos {
+    gap: 10px;
+  }
+}
