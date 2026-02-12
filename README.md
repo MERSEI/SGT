@@ -1,12 +1,79 @@
-# React + Vite
+# SGT — Consulting Company Landing Page 🏢
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive single-page landing website for a consulting / IT-outstaffing company. Built with React and Vite.
 
-Currently, two official plugins are available:
+## 🌐 Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🔗 **[Live Demo →](#)** *(coming soon)*
 
-## Expanding the ESLint configuration
+## ✨ Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- 🏠 Multi-section landing: Hero, Services, Clients, Team, Partners, Contacts
+- - 📋 IT-outstaffing services showcase
+  - - 💼 Special offers section
+    - - 👥 Team presentation
+      - - 📞 Contact form section
+        - - 📱 Fully responsive layout
+          - - 🎨 Custom SCSS styling
+           
+            - ## 🛠️ Tech Stack
+           
+            - | Technology | Purpose |
+            - |---|---|
+            - | React | UI framework |
+            - | Vite | Build tool |
+            - | JavaScript | Core logic |
+            - | SCSS | Styling |
+           
+            - ## 🚀 Getting Started
+           
+            - ### Prerequisites
+           
+            - - Node.js 18+
+              - - npm
+               
+                - ### Installation
+               
+                - ```bash
+                  git clone https://github.com/MERSEI/SGT.git
+                  cd SGT
+                  npm install
+                  npm run dev
+                  ```
+
+                  Open [http://localhost:5173](http://localhost:5173) in your browser.
+
+                  ### Build for production
+
+                  ```bash
+                  npm run build
+                  ```
+
+                  ## 📁 Project Structure
+
+                  ```
+                  SGT/
+                  ├── src/
+                  │   ├── assets/
+                  │   ├── components/
+                  │   │   ├── Header/
+                  │   │   ├── Hero/
+                  │   │   ├── Clients/
+                  │   │   ├── About/
+                  │   │   ├── ServicesAndOutstaffSectionWrapper/
+                  │   │   ├── AdvantagesSection/
+                  │   │   ├── SpecialOffersSection/
+                  │   │   ├── TeamSection/
+                  │   │   ├── PartnersSection/
+                  │   │   ├── ContactSection/
+                  │   │   └── Footer/
+                  │   ├── App.jsx
+                  │   ├── App.scss
+                  │   └── main.jsx
+                  ├── index.html
+                  └── package.json
+                  ```
+
+                  ## 📄 License
+
+                  MIT — see [LICENSE](LICENSE) for details.
