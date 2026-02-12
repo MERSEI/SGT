@@ -4,7 +4,7 @@ A modern, responsive single-page landing website for a consulting / IT-outstaffi
 
 ## 🌐 Demo
 
-🔗 **[Live Demo →](#)** *(coming soon)*
+🔗 **[Live Demo →](https://sgt-gray.vercel.app)**
 
 ## ✨ Features
 
@@ -27,53 +27,48 @@ A modern, responsive single-page landing website for a consulting / IT-outstaffi
            
             - ## 🚀 Getting Started
            
-            - ### Prerequisites
+            - **Prerequisites:** Node.js 18+, npm
            
-            - - Node.js 18+
-              - - npm
-               
-                - ### Installation
-               
-                - ```bash
-                  git clone https://github.com/MERSEI/SGT.git
-                  cd SGT
-                  npm install
-                  npm run dev
-                  ```
+            - ```bash
+              git clone https://github.com/MERSEI/SGT.git
+              cd SGT
+              npm install
+              npm run dev
+              ```
 
-                  Open [http://localhost:5173](http://localhost:5173) in your browser.
+              Open http://localhost:5173 in your browser.
 
-                  ### Build for production
+              **Build for production:**
 
-                  ```bash
-                  npm run build
-                  ```
+              ```bash
+              npm run build
+              ```
 
-                  ## 📁 Project Structure
+              ## 📁 Project Structure
 
-                  ```
-                  SGT/
-                  ├── src/
-                  │   ├── assets/
-                  │   ├── components/
-                  │   │   ├── Header/
-                  │   │   ├── Hero/
-                  │   │   ├── Clients/
-                  │   │   ├── About/
-                  │   │   ├── ServicesAndOutstaffSectionWrapper/
-                  │   │   ├── AdvantagesSection/
-                  │   │   ├── SpecialOffersSection/
-                  │   │   ├── TeamSection/
-                  │   │   ├── PartnersSection/
-                  │   │   ├── ContactSection/
-                  │   │   └── Footer/
-                  │   ├── App.jsx
-                  │   ├── App.scss
-                  │   └── main.jsx
-                  ├── index.html
-                  └── package.json
-                  ```
+              ```
+              SGT/
+              ├── src/
+              │   ├── assets/
+              │   ├── components/
+              │   │   ├── Header/
+              │   │   ├── Hero/
+              │   │   ├── Clients/
+              │   │   ├── About/
+              │   │   ├── ServicesAndOutstaffSectionWrapper/
+              │   │   ├── AdvantagesSection/
+              │   │   ├── SpecialOffersSection/
+              │   │   ├── TeamSection/
+              │   │   ├── PartnersSection/
+              │   │   ├── ContactSection/
+              │   │   └── Footer/
+              │   ├── App.jsx
+              │   ├── App.scss
+              │   └── main.jsx
+              ├── index.html
+              └── package.json
+              ```
 
-                  ## 📄 License
+              ## 📄 License
 
-                  MIT — see [LICENSE](LICENSE) for details.
+              MIT — see [LICENSE](LICENSE) for details.
